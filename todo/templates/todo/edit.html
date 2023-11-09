@@ -1,12 +1,11 @@
-
 {% load django_bootstrap5 %}
-<h1>Create Post</h1>
+<h1>Update Post</h1>
 <form method="post">
     {% csrf_token %}
 
     {% bootstrap_form form %}
 
-    {% bootstrap_button button_type="submit" content="Create" %}
+    {% bootstrap_button button_type="submit" content="Update" %}
 
 
 

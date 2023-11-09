@@ -18,3 +18,10 @@ class TodoCreate(generic.CreateView):  # creating
     model = Todo
     fields = '__all__'
     success_url = '/list/'
+    
+    
+class TodoEdit(generic.UpdateView):  # Editing the creating post
+    model = Todo
+    fields = '__all__'
+    success_url = '/list/'
+    template_name = 'todo/edit.html'

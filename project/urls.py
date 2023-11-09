@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from todo.views import TodoList, TodoDetail, TodoCreate
+from todo.views import TodoList, TodoDetail, TodoCreate, TodoEdit
 from todo.api import TodoListAPI, TodoDetailAPI
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('list/',TodoList.as_view()),
     path('list/<int:pk>',TodoDetail.as_view()),
     path('list/new',TodoCreate.as_view()),
+    path('list/<int:pk>/edit',TodoEdit.as_view()),
     # CRUD-api
     path('list/api/list/' , TodoListAPI.as_view()),
     path('list/api/list/<int:pk>' , TodoDetailAPI.as_view()),
