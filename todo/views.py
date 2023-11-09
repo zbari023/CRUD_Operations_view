@@ -14,14 +14,18 @@ class TodoList(generic.ListView):    # list view
 class TodoDetail(generic.DetailView):  # detail view
     model = Todo
     
-class TodoCreate(generic.CreateView):  # creating 
+class TodoCreate(generic.CreateView):  # creating view
     model = Todo
     fields = '__all__'
     success_url = '/list/'
     
     
-class TodoEdit(generic.UpdateView):  # Editing the creating post
+class TodoEdit(generic.UpdateView):  # Editing the created post
     model = Todo
     fields = '__all__'
     success_url = '/list/'
     template_name = 'todo/edit.html'
+    
+class TodoDelete(generic.DeleteView): # Delete the created post
+    model = Todo
+    success_url = '/list/'

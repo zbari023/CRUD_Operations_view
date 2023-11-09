@@ -18,16 +18,18 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from todo.views import TodoList, TodoDetail, TodoCreate, TodoEdit
+from todo.views import TodoList, TodoDetail, TodoCreate, TodoEdit , TodoDelete
 from todo.api import TodoListAPI, TodoDetailAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # CRUD-html
-    path('list/',TodoList.as_view()),
-    path('list/<int:pk>',TodoDetail.as_view()),
-    path('list/new',TodoCreate.as_view()),
-    path('list/<int:pk>/edit',TodoEdit.as_view()),
+    path('list/',TodoList.as_view()),                  # list
+    path('list/<int:pk>',TodoDetail.as_view()),        # detail
+    path('list/new',TodoCreate.as_view()),             # create
+    path('list/<int:pk>/edit',TodoEdit.as_view()),     # edit
+    path('list/<int:pk>/delete',TodoDelete.as_view()), # delet
+    
     # CRUD-api
     path('list/api/list/' , TodoListAPI.as_view()),
     path('list/api/list/<int:pk>' , TodoDetailAPI.as_view()),
