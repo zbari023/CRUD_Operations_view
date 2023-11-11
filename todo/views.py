@@ -23,8 +23,8 @@ class TodoCreate(generic.CreateView):  # creating view
 class TodoEdit(generic.UpdateView):  # Editing the created post
     model = Todo
     fields = '__all__'
-    success_url = '/list/'
-    template_name = 'todo/edit.html'
+    success_url = '/list/' # by redirect
+    template_name = 'todo/edit.html' # change the template name by default
     
 class TodoDelete(generic.DeleteView): # Delete the created post
     model = Todo
