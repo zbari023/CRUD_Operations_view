@@ -19,6 +19,7 @@ from django.urls import path ,include
 from django.conf import settings
 from django.conf.urls.static import static
 from todo.views import TodoList, TodoDetail, TodoCreate, TodoEdit , TodoDelete
+from todo.views import todo_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,8 +30,11 @@ urlpatterns = [
     path('list/<int:pk>/edit',TodoEdit.as_view()),     # edit
     path('list/<int:pk>/delete',TodoDelete.as_view()), # delet
     
-    # CRUD-api
-    path('list/', include('todo.urls'))
+    # CRUD-api-path using router
+    path('list/', include('todo.urls')),
+    
+    # viewjs html
+    path('',todo_list)
 ]
 
 

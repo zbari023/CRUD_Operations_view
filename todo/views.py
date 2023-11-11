@@ -3,6 +3,18 @@ from django.views import generic  # *********here***********
 from .models import Todo
 # Create your views here.
 
+
+
+# def-function for viewjs
+def todo_list(request):
+    return render(request,'todo/vus_todo.html')
+
+
+
+
+
+
+
 # CRUD-Operations class-based-view
 
 
