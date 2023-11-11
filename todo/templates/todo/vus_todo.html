@@ -18,7 +18,7 @@
 
         <div class="row my-5">
             <div class="col-lg-6 shadow rounded mx-auto d-flex align-items-center">
-                <h5 class="fw-bold font-monospace text-danger-emphasis my-2">Try</h5>
+                <h5 class="fw-bold font-monospace text-danger-emphasis my-2">Ephemeris of your Python Training</h5>
                 <div class="col"></div>
                 <button type="button" class="btn btn-info my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
             </div>
@@ -28,7 +28,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">Day</th>
                             <th scope="col">Todo</th>
                             <th scope="col">Notes</th>
                             <th scope="col">Action</th>
@@ -56,14 +56,17 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <label for="exampleInputPassword1" class="form-label">Todo</label>
+                                <textarea type="text" class="form-control" id="exampleInputPassword1"></textarea>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Notes</label>
+                              <textarea type="text" class="form-control" id="exampleInputPassword1"></textarea>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
+                                <label for="exampleInputPassword1" class="form-label">Action</label>
+                                <textarea type="text" class="form-control" id="exampleInputPassword1"></textarea>
+                              </div>
                         </form>
                     </div>
                     <div class="modal-footer">
