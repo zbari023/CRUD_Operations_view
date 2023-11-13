@@ -15,7 +15,7 @@ class TodoViewset(viewsets.ModelViewSet):     # viewswets for all CRUD in api
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     
-    filter_backends = [DjangoFilterBackend,filters.OrderingFilter]         # django filter with DjangoFilterBackend, and integration filter with filters.OrderingFilter in custom filter
+    filter_backends = [DjangoFilterBackend,filters.OrderingFilter]    # django filter with DjangoFilterBackend, and integration filter with filters.OrderingFilter in custom filter
     # filterset_fields = ['todo', 'Notes','id']       # django filter 
     
     
