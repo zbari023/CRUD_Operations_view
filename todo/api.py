@@ -14,8 +14,8 @@ class TodoViewset(viewsets.ModelViewSet):     # viewswets for all CRUD in api
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     
-    # filter_backends = [DjangoFilterBackend]       # django filter 
-    # filterset_fields = ['todo', 'Notes']          # django filter 
+    filter_backends = [DjangoFilterBackend]         # django filter 
+    filterset_fields = ['todo', 'Notes','id']       # django filter 
     
     
     filter_backends = [filters.SearchFilter]        # search
