@@ -49,8 +49,8 @@ INSTALLED_APPS = [
 # django filter, search and OrderingFilter
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 1
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',        # PAGINATION_CLASS
+    'PAGE_SIZE': 1                                                                        # number of element in one page
 }
 
 
