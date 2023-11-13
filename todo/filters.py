@@ -10,7 +10,7 @@ class TodoFilter(filter.FilterSet):
     class Meta:
         model = Todo
         fields = {
-            'id' : ['range'],
+            'id' : ['range','lte','gte'],   # lte is less than or equal to , gte is greater than or equal to
             'todo' : ['contains'],
             'Notes': ['contains']
         }
