@@ -13,12 +13,17 @@ from rest_framework import filters                               # search
 class TodoViewset(viewsets.ModelViewSet):     # viewswets for all CRUD in api
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    filter_backends = [DjangoFilterBackend]         # django filter 
-    filterset_fields = ['todo', 'Notes']            # django filter 
+    
+    # filter_backends = [DjangoFilterBackend]       # django filter 
+    # filterset_fields = ['todo', 'Notes']          # django filter 
     
     
     filter_backends = [filters.SearchFilter]        # search
-    search_fields = ['todo', 'Notes']               # search
+    search_fields = ['todo', 'Notes','id']          # search
+    
+    
+    filter_backends = [filters.OrderingFilter]      # OrderingFilter
+    ordering_fields = ['id']                        # OrderingFilter
 
 
 
