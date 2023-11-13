@@ -5,7 +5,7 @@ from .serializers import TodoSerializer
 from .models import Todo
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend    # django filter 
-from rest_framework import filters                               # search
+from rest_framework import filters                               # search and OrderingFilter
 
 
 
