@@ -40,13 +40,13 @@ INSTALLED_APPS = [
     'todo',
     'rest_framework',
     'django_bootstrap5',
-    'django_filters',      # django filter
+    'django_filters',      # django filter search
 ]
 
 
 
 
-# django filter
+# django filter search
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
