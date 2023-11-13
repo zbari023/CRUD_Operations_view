@@ -21,6 +21,13 @@ from django.conf.urls.static import static
 from todo.views import TodoList, TodoDetail, TodoCreate, TodoEdit , TodoDelete
 from todo.views import todo_list
 
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # CRUD-html
@@ -34,7 +41,11 @@ urlpatterns = [
     path('list/', include('todo.urls')),
     
     # viewjs html
-    path('',todo_list)
+    path('',todo_list),
+    
+    
+    path('list/api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('list/api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 
 

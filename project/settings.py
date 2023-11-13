@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_bootstrap5',
     'django_filters',      # django filter , search and OrderingFilter
+    
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',    # rest_framework_simplejwt security
 ]
 
 
@@ -48,6 +51,9 @@ INSTALLED_APPS = [
 
 # django filter, search and OrderingFilter
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],                                                                                    # rest_framework_simplejwt security
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',        # PAGINATION_CLASS
     'PAGE_SIZE': 1                                                                        # number of element in one page
